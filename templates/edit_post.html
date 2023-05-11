@@ -13,6 +13,12 @@
         <label>Content</label>
         <input type="text" name='content' value='{{post.content}}'>
     </div>
+    <div>
+    {% for tag in tags %}
+        <input type="radio" name="{{tag.name}}" value="{{tag.name}}"></button>
+        <label>{{tag.name}}</label>
+    {% endfor %}
+    </div>
     <button><a href='/user/{{post.user_id}}'>Cancel</a></button>
     <button>Edit</button>
 </form>
